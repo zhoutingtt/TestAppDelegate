@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainViewController.h"
+#import "NewsViewController.h"
+#import "FriendsViewController.h"
+#import "MineViewController.h"
 @interface AppDelegate ()<UITabBarDelegate>
 
 @end
@@ -40,29 +43,61 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    
--(void)setUI{
-//    _window = [[UIWindow alloc]init]
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
+
+-(void)setUI{
+    _window = [[UIWindow alloc]init];
+    _window.frame = [[UIScreen mainScreen] bounds];
+    _window.backgroundColor = [UIColor redColor];
+    
+    _tabBarController = [[UITabBarController alloc]init];
+    MainViewController *mainView = [[MainViewController alloc]init];
+    NewsViewController *newsView = [[NewsViewController alloc]init];
+    FriendsViewController *friendsView = [[FriendsViewController alloc]init];
+    MineViewController *mineView = [[MineViewController alloc]init];
+    
+    UITabBarItem *mainItem = [[UITabBarItem alloc]initWithTitle:@"首页" image:[UIImage imageNamed:@""] tag:1];
+    UITabBarItem *newsItem = [[UITabBarItem alloc]initWithTitle:@"消息" image:[UIImage imageNamed:@""] tag:2];
+    UITabBarItem *friendsItem = [[UITabBarItem alloc]initWithTitle:@"圈子" image:[UIImage imageNamed:@""] tag:3];
+    UITabBarItem *mineItem = [[UITabBarItem alloc]initWithTitle:@"个人中心" image:[UIImage imageNamed:@""] tag:4];
+    
+    _mainViewController = [[UINavigationController alloc]initWithRootViewController:mainView];
+    _newsViewController = [[UINavigationController alloc]initWithRootViewController:newsView];
+    _friendsViewController = [[UINavigationController alloc]initWithRootViewController:friendsView];
+    _mineViewController = [[UINavigationController alloc]initWithRootViewController:mineView];
+    
+    [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:_mainViewController,_newsViewController,_friendsViewController,_mineViewController, nil]];
+    
+    _tabBarController.hidesBottomBarWhenPushed = YES;
+    _tabBarController.selectedIndex = 0;
+    _tabBarController.delegate = self;
+    
+    _window.userInteractionEnabled = YES;
+    [_window setRootViewController:_tabBarController];
+    [_window makeKeyAndVisible];
+    
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor orangeColor];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

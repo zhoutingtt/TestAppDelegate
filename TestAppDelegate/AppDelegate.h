@@ -11,7 +11,11 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) UINavigationController *mainViewController;
+@property (strong, nonatomic) UINavigationController *newsViewController;
+@property (strong, nonatomic) UINavigationController *friendsViewController;
+@property (strong, nonatomic) UINavigationController *mineViewController;
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end
 
