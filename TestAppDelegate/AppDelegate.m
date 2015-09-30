@@ -20,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setUI];
     return YES;
 }
 
@@ -48,7 +49,7 @@
 -(void)setUI{
     _window = [[UIWindow alloc]init];
     _window.frame = [[UIScreen mainScreen] bounds];
-    _window.backgroundColor = [UIColor redColor];
+    _window.backgroundColor = [UIColor blackColor];
     
     _tabBarController = [[UITabBarController alloc]init];
     MainViewController *mainView = [[MainViewController alloc]init];
@@ -62,21 +63,35 @@
     UITabBarItem *mineItem = [[UITabBarItem alloc]initWithTitle:@"个人中心" image:[UIImage imageNamed:@""] tag:4];
     
     _mainViewController = [[UINavigationController alloc]initWithRootViewController:mainView];
+    _mainViewController.tabBarItem = mainItem;
     _newsViewController = [[UINavigationController alloc]initWithRootViewController:newsView];
+    _newsViewController.tabBarItem = newsItem;
     _friendsViewController = [[UINavigationController alloc]initWithRootViewController:friendsView];
+    _friendsViewController.tabBarItem = friendsItem;
     _mineViewController = [[UINavigationController alloc]initWithRootViewController:mineView];
+    _mineViewController.tabBarItem = mineItem;
+    
+    if ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1]intValue]>=7) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        _mainViewController.navigationBar.translucent = NO;
+        _newsViewController.navigationBar.translucent = NO;
+        _friendsViewController.navigationBar.translucent = NO;
+        _mineViewController.navigationBar.translucent = NO;
+        [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+    }
+    
     
     [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:_mainViewController,_newsViewController,_friendsViewController,_mineViewController, nil]];
     
     _tabBarController.hidesBottomBarWhenPushed = YES;
     _tabBarController.selectedIndex = 0;
     _tabBarController.delegate = self;
-    
     _window.userInteractionEnabled = YES;
     [_window setRootViewController:_tabBarController];
     [_window makeKeyAndVisible];
     
-    _tabBarController.tabBar.selectedImageTintColor = [UIColor orangeColor];
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor redColor];
+   
 }
 
 

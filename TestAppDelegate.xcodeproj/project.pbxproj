@@ -18,10 +18,10 @@
 		183DE5191BB97E2C003EC467 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183DE5171BB97E2C003EC467 /* MainViewController.xib */; };
 		183DE51D1BB97E59003EC467 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE51B1BB97E59003EC467 /* NewsViewController.m */; };
 		183DE51E1BB97E59003EC467 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183DE51C1BB97E59003EC467 /* NewsViewController.xib */; };
-		183DE5221BB97F09003EC467 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE5201BB97F09003EC467 /* FriendsViewController.m */; };
-		183DE5231BB97F09003EC467 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183DE5211BB97F09003EC467 /* FriendsViewController.xib */; };
 		183DE5271BB97F5C003EC467 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE5251BB97F5C003EC467 /* MineViewController.m */; };
 		183DE5281BB97F5C003EC467 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183DE5261BB97F5C003EC467 /* MineViewController.xib */; };
+		18E7AA591BBC2F8E002F0CFE /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7AA571BBC2F8E002F0CFE /* FriendsViewController.m */; };
+		18E7AA5A1BBC2F8E002F0CFE /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E7AA581BBC2F8E002F0CFE /* FriendsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +54,12 @@
 		183DE51A1BB97E59003EC467 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		183DE51B1BB97E59003EC467 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		183DE51C1BB97E59003EC467 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
-		183DE51F1BB97F09003EC467 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsViewController.h; path = ../FriendsViewController.h; sourceTree = "<group>"; };
-		183DE5201BB97F09003EC467 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = ../FriendsViewController.m; sourceTree = "<group>"; };
-		183DE5211BB97F09003EC467 /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FriendsViewController.xib; path = ../FriendsViewController.xib; sourceTree = "<group>"; };
 		183DE5241BB97F5C003EC467 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		183DE5251BB97F5C003EC467 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		183DE5261BB97F5C003EC467 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		18E7AA561BBC2F8E002F0CFE /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		18E7AA571BBC2F8E002F0CFE /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		18E7AA581BBC2F8E002F0CFE /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,12 +115,12 @@
 				183DE51A1BB97E59003EC467 /* NewsViewController.h */,
 				183DE51B1BB97E59003EC467 /* NewsViewController.m */,
 				183DE51C1BB97E59003EC467 /* NewsViewController.xib */,
-				183DE51F1BB97F09003EC467 /* FriendsViewController.h */,
-				183DE5201BB97F09003EC467 /* FriendsViewController.m */,
-				183DE5211BB97F09003EC467 /* FriendsViewController.xib */,
 				183DE5241BB97F5C003EC467 /* MineViewController.h */,
 				183DE5251BB97F5C003EC467 /* MineViewController.m */,
 				183DE5261BB97F5C003EC467 /* MineViewController.xib */,
+				18E7AA561BBC2F8E002F0CFE /* FriendsViewController.h */,
+				18E7AA571BBC2F8E002F0CFE /* FriendsViewController.m */,
+				18E7AA581BBC2F8E002F0CFE /* FriendsViewController.xib */,
 			);
 			path = TestAppDelegate;
 			sourceTree = "<group>";
@@ -234,8 +234,8 @@
 				183DE4FB1BB972CB003EC467 /* Main.storyboard in Resources */,
 				183DE5281BB97F5C003EC467 /* MineViewController.xib in Resources */,
 				183DE5001BB972CB003EC467 /* LaunchScreen.xib in Resources */,
-				183DE5231BB97F09003EC467 /* FriendsViewController.xib in Resources */,
 				183DE51E1BB97E59003EC467 /* NewsViewController.xib in Resources */,
+				18E7AA5A1BBC2F8E002F0CFE /* FriendsViewController.xib in Resources */,
 				183DE4FD1BB972CB003EC467 /* Images.xcassets in Resources */,
 				183DE5191BB97E2C003EC467 /* MainViewController.xib in Resources */,
 			);
@@ -255,9 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183DE5221BB97F09003EC467 /* FriendsViewController.m in Sources */,
 				183DE5271BB97F5C003EC467 /* MineViewController.m in Sources */,
 				183DE4F81BB972CB003EC467 /* ViewController.m in Sources */,
+				18E7AA591BBC2F8E002F0CFE /* FriendsViewController.m in Sources */,
 				183DE4F51BB972CB003EC467 /* AppDelegate.m in Sources */,
 				183DE51D1BB97E59003EC467 /* NewsViewController.m in Sources */,
 				183DE4F21BB972CB003EC467 /* main.m in Sources */,
@@ -456,6 +456,7 @@
 				183DE5111BB972CB003EC467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183DE5121BB972CB003EC467 /* Build configuration list for PBXNativeTarget "TestAppDelegateTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				183DE5141BB972CB003EC467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
