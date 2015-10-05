@@ -49,7 +49,7 @@
 -(void)setUI{
     _window = [[UIWindow alloc]init];
     _window.frame = [[UIScreen mainScreen] bounds];
-    _window.backgroundColor = [UIColor blackColor];
+    //_window.backgroundColor = [UIColor blackColor];
     
     _tabBarController = [[UITabBarController alloc]init];
     MainViewController *mainView = [[MainViewController alloc]init];
@@ -57,10 +57,10 @@
     FriendsViewController *friendsView = [[FriendsViewController alloc]init];
     MineViewController *mineView = [[MineViewController alloc]init];
     
-    UITabBarItem *mainItem = [[UITabBarItem alloc]initWithTitle:@"首页" image:[UIImage imageNamed:@""] tag:1];
-    UITabBarItem *newsItem = [[UITabBarItem alloc]initWithTitle:@"消息" image:[UIImage imageNamed:@""] tag:2];
-    UITabBarItem *friendsItem = [[UITabBarItem alloc]initWithTitle:@"圈子" image:[UIImage imageNamed:@""] tag:3];
-    UITabBarItem *mineItem = [[UITabBarItem alloc]initWithTitle:@"个人中心" image:[UIImage imageNamed:@""] tag:4];
+    UITabBarItem *mainItem = [[UITabBarItem alloc]initWithTitle:@"首页" image:[UIImage imageNamed:@"1"] tag:1];
+    UITabBarItem *newsItem = [[UITabBarItem alloc]initWithTitle:@"消息" image:[UIImage imageNamed:@"2"] tag:2];
+    UITabBarItem *friendsItem = [[UITabBarItem alloc]initWithTitle:@"圈子" image:[UIImage imageNamed:@"3"] tag:3];
+    UITabBarItem *mineItem = [[UITabBarItem alloc]initWithTitle:@"个人中心" image:[UIImage imageNamed:@"4"] tag:4];
     
     _mainViewController = [[UINavigationController alloc]initWithRootViewController:mainView];
     _mainViewController.tabBarItem = mainItem;
@@ -73,10 +73,10 @@
     
     if ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1]intValue]>=7) {
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        _mainViewController.navigationBar.translucent = NO;
-        _newsViewController.navigationBar.translucent = NO;
-        _friendsViewController.navigationBar.translucent = NO;
-        _mineViewController.navigationBar.translucent = NO;
+        _mainViewController.navigationBar.translucent = YES;
+        _newsViewController.navigationBar.translucent = YES;
+        _friendsViewController.navigationBar.translucent = YES;
+        _mineViewController.navigationBar.translucent = YES;
         [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
     }
     
