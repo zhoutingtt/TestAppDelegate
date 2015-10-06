@@ -9,8 +9,9 @@
 #import "NewsViewController.h"
 #import "ProductListTableViewCell.h"
 
-@interface NewsViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+@interface NewsViewController ()<UITableViewDataSource,UITableViewDelegate>{
+    NSMutableArray *_productListArr;
+}
 @end
 
 @implementation NewsViewController
@@ -38,6 +39,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"ProductCell";
     ProductListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.productName.text = (NSString *) _productListArr[indexPath.row][@"productName"];
     return cell;
 }
 
