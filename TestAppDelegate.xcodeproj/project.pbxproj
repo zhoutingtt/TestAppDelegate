@@ -20,6 +20,8 @@
 		183DE51E1BB97E59003EC467 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183DE51C1BB97E59003EC467 /* NewsViewController.xib */; };
 		183DE5271BB97F5C003EC467 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE5251BB97F5C003EC467 /* MineViewController.m */; };
 		183DE5281BB97F5C003EC467 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183DE5261BB97F5C003EC467 /* MineViewController.xib */; };
+		1846F82E1BC2D8CB004C7879 /* ProductListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846F82C1BC2D8CB004C7879 /* ProductListTableViewCell.m */; };
+		1846F82F1BC2D8CB004C7879 /* ProductListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846F82D1BC2D8CB004C7879 /* ProductListTableViewCell.xib */; };
 		18E7AA591BBC2F8E002F0CFE /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7AA571BBC2F8E002F0CFE /* FriendsViewController.m */; };
 		18E7AA5A1BBC2F8E002F0CFE /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E7AA581BBC2F8E002F0CFE /* FriendsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,9 @@
 		183DE5241BB97F5C003EC467 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		183DE5251BB97F5C003EC467 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		183DE5261BB97F5C003EC467 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		1846F82B1BC2D8CB004C7879 /* ProductListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListTableViewCell.h; sourceTree = "<group>"; };
+		1846F82C1BC2D8CB004C7879 /* ProductListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListTableViewCell.m; sourceTree = "<group>"; };
+		1846F82D1BC2D8CB004C7879 /* ProductListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductListTableViewCell.xib; sourceTree = "<group>"; };
 		18E7AA561BBC2F8E002F0CFE /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		18E7AA571BBC2F8E002F0CFE /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		18E7AA581BBC2F8E002F0CFE /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
@@ -121,6 +126,9 @@
 				18E7AA561BBC2F8E002F0CFE /* FriendsViewController.h */,
 				18E7AA571BBC2F8E002F0CFE /* FriendsViewController.m */,
 				18E7AA581BBC2F8E002F0CFE /* FriendsViewController.xib */,
+				1846F82B1BC2D8CB004C7879 /* ProductListTableViewCell.h */,
+				1846F82C1BC2D8CB004C7879 /* ProductListTableViewCell.m */,
+				1846F82D1BC2D8CB004C7879 /* ProductListTableViewCell.xib */,
 			);
 			path = TestAppDelegate;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 				183DE5001BB972CB003EC467 /* LaunchScreen.xib in Resources */,
 				183DE51E1BB97E59003EC467 /* NewsViewController.xib in Resources */,
 				18E7AA5A1BBC2F8E002F0CFE /* FriendsViewController.xib in Resources */,
+				1846F82F1BC2D8CB004C7879 /* ProductListTableViewCell.xib in Resources */,
 				183DE4FD1BB972CB003EC467 /* Images.xcassets in Resources */,
 				183DE5191BB97E2C003EC467 /* MainViewController.xib in Resources */,
 			);
@@ -260,6 +269,7 @@
 				18E7AA591BBC2F8E002F0CFE /* FriendsViewController.m in Sources */,
 				183DE4F51BB972CB003EC467 /* AppDelegate.m in Sources */,
 				183DE51D1BB97E59003EC467 /* NewsViewController.m in Sources */,
+				1846F82E1BC2D8CB004C7879 /* ProductListTableViewCell.m in Sources */,
 				183DE4F21BB972CB003EC467 /* main.m in Sources */,
 				183DE5181BB97E2C003EC467 /* MainViewController.m in Sources */,
 			);

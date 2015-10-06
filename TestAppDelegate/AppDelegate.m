@@ -57,10 +57,10 @@
     FriendsViewController *friendsView = [[FriendsViewController alloc]init];
     MineViewController *mineView = [[MineViewController alloc]init];
     
-    UITabBarItem *mainItem = [[UITabBarItem alloc]initWithTitle:@"首页" image:[UIImage imageNamed:@"1"] tag:1];
-    UITabBarItem *newsItem = [[UITabBarItem alloc]initWithTitle:@"消息" image:[UIImage imageNamed:@"2"] tag:2];
-    UITabBarItem *friendsItem = [[UITabBarItem alloc]initWithTitle:@"圈子" image:[UIImage imageNamed:@"3"] tag:3];
-    UITabBarItem *mineItem = [[UITabBarItem alloc]initWithTitle:@"个人中心" image:[[UIImage imageNamed:@"4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:4];
+    UITabBarItem *mainItem = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:1];
+    UITabBarItem *newsItem = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:2];
+    UITabBarItem *friendsItem = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"3"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:3];
+    UITabBarItem *mineItem = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] tag:4];
     
     _mainViewController = [[UINavigationController alloc]initWithRootViewController:mainView];
     _mainViewController.tabBarItem = mainItem;

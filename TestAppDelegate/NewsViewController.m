@@ -7,8 +7,9 @@
 //
 
 #import "NewsViewController.h"
+#import "ProductListTableViewCell.h"
 
-@interface NewsViewController ()
+@interface NewsViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -24,6 +25,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableViewCell *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *identifier = @"ProductCell";
+    ProductListTableViewCell *cell = [tableView dequeuerReusableCellWithIdentifier:identifier];
+    return cell;
+}
 /*
 #pragma mark - Navigation
 
