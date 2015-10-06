@@ -29,11 +29,18 @@
     return 1;
 }
 
--(UITableViewCell *)tableView:(UITableViewCell *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//-(UITableViewCell *)tableView:(UITableViewCell *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    NSString *identifier = @"ProductCell";
+//    ProductListTableViewCell *cell = [tableView dequeuerReusableCellWithIdentifier:identifier];
+//    return cell;
+//}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"ProductCell";
-    ProductListTableViewCell *cell = [tableView dequeuerReusableCellWithIdentifier:identifier];
+    ProductListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     return cell;
 }
+
 /*
 #pragma mark - Navigation
 
