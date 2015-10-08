@@ -27,6 +27,9 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSString *str = @"aaa";
+    [self getProductListWithStr:str jjj:@""];
+
     return 1;
 }
 
@@ -35,6 +38,9 @@
 //    ProductListTableViewCell *cell = [tableView dequeuerReusableCellWithIdentifier:identifier];
 //    return cell;
 //}
+- (void)getProductListWithStr:(NSString *)str jjj:(NSString *)jjj{
+    NSLog(@"%@",str);
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"ProductCell";
