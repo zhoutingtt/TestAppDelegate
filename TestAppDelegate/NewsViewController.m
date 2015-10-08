@@ -8,6 +8,8 @@
 
 #import "NewsViewController.h"
 #import "ProductListTableViewCell.h"
+#import "AFHTTPRequestOperationManager.h"
+
 
 @interface NewsViewController ()<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *_productListArr;
@@ -35,6 +37,14 @@
 //    ProductListTableViewCell *cell = [tableView dequeuerReusableCellWithIdentifier:identifier];
 //    return cell;
 //}
+-(void)getProductList:(NSString *)productName categoryId:(NSString *)category priceorder:(NSString *)priceorder{
+    NSString *url = [NSString stringWithFormat:@"www.jxshshop.cn/phone/baseshop/queryShopProductlist?corpid=1&start=0&limit=100"];
+    
+    NSString *urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPRequestOperationManager *managers = [AFHTTPRequestOperationManager manager];
+    managers.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    [managers GET:urlString parameters:nil success:<#(nullable void (^)(AFHTTPRequestOperation * __nonnull, id __nonnull)(nullable )success#> failure:<#(nullable void (^)(AFHTTPRequestOperation * __nonnull, NSError * __nonnull)(nullable )failure#>
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"ProductCell";
