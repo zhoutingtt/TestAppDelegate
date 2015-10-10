@@ -29,6 +29,9 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSString *str = @"aaa";
+    [self getProductListWithStr:str jjj:@""];
+
     return 1;
 }
 
@@ -37,6 +40,7 @@
 //    ProductListTableViewCell *cell = [tableView dequeuerReusableCellWithIdentifier:identifier];
 //    return cell;
 //}
+<<<<<<< HEAD
 -(void)getProductList:(NSString *)productName categoryId:(NSString *)category priceorder:(NSString *)priceorder{
     NSString *url = [NSString stringWithFormat:@"www.jxshshop.cn/phone/baseshop/queryShopProductlist?corpid=1&start=0&limit=100"];
     
@@ -44,6 +48,10 @@
     AFHTTPRequestOperationManager *managers = [AFHTTPRequestOperationManager manager];
     managers.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [managers GET:urlString parameters:nil success:<#(nullable void (^)(AFHTTPRequestOperation * __nonnull, id __nonnull)(nullable )success#> failure:<#(nullable void (^)(AFHTTPRequestOperation * __nonnull, NSError * __nonnull)(nullable )failure#>
+=======
+- (void)getProductListWithStr:(NSString *)str jjj:(NSString *)jjj{
+    NSLog(@"%@",str);
+>>>>>>> origin/master
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
