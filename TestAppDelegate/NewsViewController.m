@@ -29,9 +29,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSString *str = @"aaa";
-    [self getProductListWithStr:str jjj:@""];
-
+  
     return 1;
 }
 
@@ -40,18 +38,17 @@
 //    ProductListTableViewCell *cell = [tableView dequeuerReusableCellWithIdentifier:identifier];
 //    return cell;
 //}
-<<<<<<< HEAD
 -(void)getProductList:(NSString *)productName categoryId:(NSString *)category priceorder:(NSString *)priceorder{
     NSString *url = [NSString stringWithFormat:@"www.jxshshop.cn/phone/baseshop/queryShopProductlist?corpid=1&start=0&limit=100"];
     
     NSString *urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPRequestOperationManager *managers = [AFHTTPRequestOperationManager manager];
     managers.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [managers GET:urlString parameters:nil success:<#(nullable void (^)(AFHTTPRequestOperation * __nonnull, id __nonnull)(nullable )success#> failure:<#(nullable void (^)(AFHTTPRequestOperation * __nonnull, NSError * __nonnull)(nullable )failure#>
-=======
-- (void)getProductListWithStr:(NSString *)str jjj:(NSString *)jjj{
-    NSLog(@"%@",str);
->>>>>>> origin/master
+    //    [managers GET:urlString parameters:nil success:^nullable void(AFHTTPRequestOperation * __nonnull, id __nonnull) {
+    //
+    //    } failure:^nullable void(AFHTTPRequestOperation * __nonnull, NSError * __nonnull) {
+    //
+    //    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -62,13 +59,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
