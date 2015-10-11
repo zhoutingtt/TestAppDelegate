@@ -13,6 +13,7 @@
 
 @interface NewsViewController ()<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *_productListArr;
+    NSMutableArray *_imgUrlArr;
 }
 @end
 
@@ -44,13 +45,18 @@
     NSString *urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPRequestOperationManager *managers = [AFHTTPRequestOperationManager manager];
     managers.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    //    [managers GET:urlString parameters:nil success:^nullable void(AFHTTPRequestOperation * __nonnull, id __nonnull) {
-    //
-    //    } failure:^nullable void(AFHTTPRequestOperation * __nonnull, NSError * __nonnull) {
-    //
-    //    }
-}
-
+    [managers GET:urlString parameters:nil success:^nullable void(AFHTTPRequestOperation * operation, id responseObject) {
+        //        [hud hide:YES];
+        //        [hud removeFromSuperview];
+        NSDictionary *dic = [[NSDictionary alloc]initWithDictionary:responseObject];
+        _productListArr = dic[@"data"];
+        _imgUrlArr = [[NSMutableArray alloc]init];
+        
+        
+    } failure:^nullable void(AFHTTPRequestOperation * operation, NSError * error) {
+        
+    }];
+     
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"ProductCell";
     ProductListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
