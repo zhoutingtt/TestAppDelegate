@@ -45,7 +45,7 @@
     NSString *urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPRequestOperationManager *managers = [AFHTTPRequestOperationManager manager];
     managers.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [managers GET:urlString parameters:nil success:^nullable void(AFHTTPRequestOperation * operation, id responseObject) {
+    [managers GET:urlString parameters:nil success:^void(AFHTTPRequestOperation * operation, id responseObject) {
         //        [hud hide:YES];
         //        [hud removeFromSuperview];
         NSDictionary *dic = [[NSDictionary alloc]initWithDictionary:responseObject];
@@ -53,10 +53,11 @@
         _imgUrlArr = [[NSMutableArray alloc]init];
         
         
-    } failure:^nullable void(AFHTTPRequestOperation * operation, NSError * error) {
+    } failure:^void(AFHTTPRequestOperation * operation, NSError * error) {
         
     }];
-     
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"ProductCell";
     ProductListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
