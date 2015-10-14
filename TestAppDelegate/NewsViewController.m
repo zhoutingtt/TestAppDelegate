@@ -51,8 +51,7 @@
         NSDictionary *dic = [[NSDictionary alloc]initWithDictionary:responseObject];
         _productListArr = dic[@"data"];
         _imgUrlArr = [[NSMutableArray alloc]init];
-        
-        
+
     } failure:^void(AFHTTPRequestOperation * operation, NSError * error) {
         
     }];
