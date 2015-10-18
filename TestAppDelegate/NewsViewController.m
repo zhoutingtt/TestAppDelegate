@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self getProductList:nil categoryId:nil priceorder:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +42,7 @@
 //    return cell;
 //}
 -(void)getProductList:(NSString *)productName categoryId:(NSString *)category priceorder:(NSString *)priceorder{
-    NSString *url = [NSString stringWithFormat:@"www.jxshshop.cn/phone/baseshop/queryShopProductlist?corpid=1&start=0&limit=100"];
+    NSString *url = [NSString stringWithFormat:@"http://www.jxshshop.cn/phone/baseshop/queryShopProductlist?corpid=1&start=0&limit=100"];
     
     NSString *urlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPRequestOperationManager *managers = [AFHTTPRequestOperationManager manager];
@@ -51,15 +53,18 @@
         NSDictionary *dic = [[NSDictionary alloc]initWithDictionary:responseObject];
         _productListArr = dic[@"data"];
         _imgUrlArr = [[NSMutableArray alloc]init];
-
+        [self.tableview reloadData];
     } failure:^void(AFHTTPRequestOperation * operation, NSError * error) {
-        
+        NSLog(@"error:%@",error);
     }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *identifier = @"ProductCell";
     ProductListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[ProductListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
     cell.productName.text = (NSString *) _productListArr[indexPath.row][@"productName"];
     return cell;
 }
