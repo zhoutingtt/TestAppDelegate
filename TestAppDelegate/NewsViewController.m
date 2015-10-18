@@ -63,10 +63,15 @@
     NSString *identifier = @"ProductCell";
     ProductListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-//        cell = [[ProductListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"ProductListTableViewCell" owner:self options:nil]objectAtIndex:0];
+//       cell = [[ProductListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+       cell = [[[NSBundle mainBundle]loadNibNamed:@"ProductListTableViewCell" owner:self options:nil]objectAtIndex:0];
     }
     cell.productName.text = _productListArr[indexPath.row][@"productname"];
+    cell.nowPrice.text = [NSString stringWithFormat:@"现价：%@", _productListArr[indexPath.row][@"shopprice"]];
+    cell.oldPrice.text = [NSString stringWithFormat:@"原价：%@",_productListArr[indexPath.row][@"oldprice"]];
+    cell.specification.text = [NSString stringWithFormat:@"规格：%@",_productListArr[indexPath.row][@"productspec"]];
+    cell.unit.text = [NSString stringWithFormat:@"单位：%@",_productListArr[indexPath.row][@"measureunit"]];
+    cell.shopName.text = [NSString stringWithFormat:@"店铺：%@",_productListArr[indexPath.row][@"shopname"]];
     return cell;
 }
 
