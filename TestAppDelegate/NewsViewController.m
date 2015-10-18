@@ -33,7 +33,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
   
-    return 1;
+    return _productListArr.count;
 }
 
 //-(UITableViewCell *)tableView:(UITableViewCell *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -63,9 +63,10 @@
     NSString *identifier = @"ProductCell";
     ProductListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[ProductListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+//        cell = [[ProductListTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"ProductListTableViewCell" owner:self options:nil]objectAtIndex:0];
     }
-    cell.productName.text = (NSString *) _productListArr[indexPath.row][@"productName"];
+    cell.productName.text = _productListArr[indexPath.row][@"productname"];
     return cell;
 }
 
@@ -79,4 +80,7 @@
  }
  */
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 124;
+}
 @end

@@ -40,12 +40,6 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="现价：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgM-kc-gWx">
-                        <rect key="frame" x="131" y="41" width="120" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="原价：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoD-ye-8gg">
                         <rect key="frame" x="259" y="41" width="108" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -58,12 +52,17 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="现价：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgM-kc-gWx">
+                        <rect key="frame" x="131" y="41" width="120" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="btnBuy" destination="dHv-N3-ZHX" id="1gv-7C-I1h"/>
-                <outlet property="newPrice" destination="VgM-kc-gWx" id="dfK-Xz-NMP"/>
-                <outlet property="nowPrice" destination="VgM-kc-gWx" id="9ho-zT-J9h"/>
+                <outlet property="nowPrice" destination="VgM-kc-gWx" id="oMu-QS-sDJ"/>
                 <outlet property="oldPrice" destination="CoD-ye-8gg" id="LPI-8O-whW"/>
                 <outlet property="productLogo" destination="LHc-vR-azI" id="nMC-hZ-eRL"/>
                 <outlet property="productName" destination="CwW-cS-M38" id="QaJ-Hf-Q6N"/>

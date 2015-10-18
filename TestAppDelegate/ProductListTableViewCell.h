@@ -11,6 +11,7 @@
 @interface ProductListTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *productName;
 @property (weak, nonatomic) IBOutlet UILabel *nowPrice;
+
 @property (weak, nonatomic) IBOutlet UILabel *oldPrice;
 @property (weak, nonatomic) IBOutlet UILabel *specification;
 @property (weak, nonatomic) IBOutlet UILabel *unit;
