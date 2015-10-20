@@ -53,6 +53,10 @@
         NSDictionary *dic = [[NSDictionary alloc]initWithDictionary:responseObject];
         _productListArr = dic[@"data"];
         _imgUrlArr = [[NSMutableArray alloc]init];
+        for (int i=0; i<[_productListArr count]; i++) {
+            NSString *picurl = [NSString stringWithFormat:@"http://www.jxshshop.cn/icon/%@",_productListArr[i][@"path1"]];
+            [_imgUrlArr addObject:picurl];
+        }
         [self.tableview reloadData];
     } failure:^void(AFHTTPRequestOperation * operation, NSError * error) {
         NSLog(@"error:%@",error);
@@ -72,6 +76,7 @@
     cell.specification.text = [NSString stringWithFormat:@"规格：%@",_productListArr[indexPath.row][@"productspec"]];
     cell.unit.text = [NSString stringWithFormat:@"单位：%@",_productListArr[indexPath.row][@"measureunit"]];
     cell.shopName.text = [NSString stringWithFormat:@"店铺：%@",_productListArr[indexPath.row][@"shopname"]];
+    cell.productLogo.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_imgUrlArr[indexPath.row]]]];
     return cell;
 }
 
